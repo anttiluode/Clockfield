@@ -1,5 +1,7 @@
 # Clockfield: Adaptive Time in Neural Computation
 
+EDIT: Added clockfield apps folder with some attempts to use this. It has its own readme. 
+
 **When neurons crystallize, time slows down.**
 
 This repository presents the Clockfield hypothesis: that neural computation — biological and artificial — operates on a curved temporal metric where the local speed of time depends on the crystallization state of each processing unit. Stable circuits experience slow time (resistant to perturbation). Searching circuits experience fast time (rapid exploration). The metric self-organizes without external supervision.

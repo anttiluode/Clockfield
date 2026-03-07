@@ -780,7 +780,7 @@ Unknown words use raw CLIP. Mix freely: **"antti sunset"**, **"healthy bean"**, 
                     hf_name  = gr.Textbox(label="Dataset", value="beans", placeholder="HuggingFace dataset name")
                     hf_split = gr.Textbox(label="Split", value="train[:300]")
                 with gr.Row():
-                    hf_ep    = gr.Slider(1, 30, value=5,  step=1,   label="Epochs")
+                    hf_ep    = gr.Slider(1, 1000, value=5,  step=1,   label="Epochs")
                     hf_bs    = gr.Slider(4, 64, value=16, step=4,   label="Batch Size")
                     hf_lr    = gr.Number(value=2e-4,               label="Learning Rate")
                 hf_btn       = gr.Button("▶ TRAIN", variant="primary")
@@ -792,7 +792,7 @@ Unknown words use raw CLIP. Mix freely: **"antti sunset"**, **"healthy bean"**, 
                 gr.Markdown("Structure: `root/concept_name/image.jpg` — each subfolder = one concept word.")
                 folder_path  = gr.Textbox(label="Folder Path", placeholder="/path/to/images")
                 with gr.Row():
-                    f_ep     = gr.Slider(1, 30, value=5,  step=1,   label="Epochs")
+                    f_ep     = gr.Slider(1, 1000, value=5,  step=1,   label="Epochs")
                     f_bs     = gr.Slider(4, 64, value=16, step=4,   label="Batch Size")
                     f_lr     = gr.Number(value=2e-4,               label="Learning Rate")
                 f_btn        = gr.Button("▶ TRAIN", variant="primary")
@@ -809,7 +809,7 @@ More images = better dreams. Even 5–10 photos will work.
                 upload_imgs  = gr.Gallery(label="Upload Images", columns=5, height=260, type="pil")
                 concept_box  = gr.Textbox(label="Concept Name (one word)", placeholder="antti  |  mydog  |  sunset")
                 with gr.Row():
-                    u_ep     = gr.Slider(1, 100, value=20, step=1,  label="Epochs (more = better for few images)")
+                    u_ep     = gr.Slider(1, 1000, value=20, step=1,  label="Epochs (more = better for few images)")
                     u_bs     = gr.Slider(1, 32,  value=4,  step=1,  label="Batch Size")
                     u_lr     = gr.Number(value=2e-4,                label="Learning Rate")
                 u_btn        = gr.Button("▶ TEACH THIS CONCEPT", variant="primary")
